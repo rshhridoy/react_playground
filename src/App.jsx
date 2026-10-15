@@ -10,6 +10,7 @@ const App = () => {
       <Student img = {Propic} name = "Hridoy"  isStudent= {true}/>
       <Student img = {Propic2} name = 'Squize' age = {26} isStudent = {false}></Student>
       <Student img = {Propic3} name = 'Circle' age = {36} isStudent = {false}></Student>
+      <Student />
     </>
   );
 }

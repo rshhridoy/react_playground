@@ -3,12 +3,6 @@ import {z} from 'zod';
 
 const Student = (prop) => {
 
-    const result = StudentSchema.safeParse(prop);
-
-    if(!result.success){
-        console.error(result.error);
-    }
-    else{
         return(
             <div className="single">
                 <img src={prop.img} alt="placeholder" />
@@ -17,13 +11,14 @@ const Student = (prop) => {
                 <p>Student: {prop.isStudent ? "Yes" : "No"}</p>
             </div>
         );
-    }
 
 }
-const StudentSchema = z.object({
-    name: z.string(),
-    age: z.number(),
-    isStudent: z.boolean(),
-});
+
+
+Student.defaultProps = {
+    name: "Guest",
+    age: 0,
+    isStudent: false,
+}
 
 export default Student;
