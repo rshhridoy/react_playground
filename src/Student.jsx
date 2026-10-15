@@ -2,7 +2,8 @@
 
 const Student = (prop) => {
     return(
-        <div>
+        <div className="single">
+            <img src={prop.img} alt="placeholder" />
             <p>Name: {prop.name}</p>
             <p>Age: {prop.age}</p>
             <p>Student: {prop.isStudent ? "Yes" : "No"}</p>
