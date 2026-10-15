@@ -1,23 +1,12 @@
-
-// How to style react components with css
-
-
-//(not including external frameworks or preprocessors)
-
-// 1. External
-// 2. Modules
-// 3. Inline
+import Student from "./Student";
 
 
-import Button from './Button';
-
-function App() {  
+const App = () => {
   return(
     <>
-      <Button/>
+      <Student name = "Hridoy" age = {30} isStudent= {true}/>
     </>
   );
-  
 }
 
-export default App
+export default App;
