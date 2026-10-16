@@ -8,17 +8,21 @@ function List (){
         {id: 4, name: 'pineappple', calorie: 37}
     ];
 
-    // fruits.sort((a, b) => a.name.localeCompare(b.name));   Alphabetical
+    // Sorting
+    // fruits.sort((a, b) => a.name.localeCompare(b.name));    Alphabetical
+    // fruits.sort((a,b) => b.name.localeCompare(a.name));     Reverse Alphabetical
+    // fruits.sort((a,b) => a.calorie - b.calorie);            Numeric
+    // fruits.sort((a,b) => b.calorie - a.calorie);            Reverse Numeric
 
-    // fruits.sort((a,b) => b.name.localeCompare(a.name));       Reverse Alphabetical
+    // filter
+    const localFruits = fruits.filter(fruit => fruit.calorie <= 90);
+    const highCalFruits = fruits.filter(fruit => fruit.calorie >90);
 
-    fruits.sort((a,b) => a.calorie - b.calorie);          //  Numeric
+    const lowFruitList = localFruits.map(localFruit => <li key={localFruit.id}>{localFruit.name} , <b>{localFruit.calorie}</b></li>);
 
-    // fruits.sort((a,b) => b.calorie - a.calorie);                Reverse Numeric
+    const highFruitList = highCalFruits.map(highCalFruit => <li key={highCalFruit.id}>{highCalFruit.name}, <b>{highCalFruit.calorie}</b></li>)
 
-    const fruitlist = fruits.map(fruit => <li key={fruit.id}>{fruit.name} , <b>{fruit.calorie}</b></li>);
-
-    return(<ol>{fruitlist}</ol>)
+    return(<><ol>{lowFruitList}</ol><ol>{highFruitList}</ol></>);
 }
 
 export default List;
