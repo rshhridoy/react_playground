@@ -1,24 +1,17 @@
-body{
-  margin: 0;
-  padding: 0;
-  background-color: #121212;
-}
-
-.single{
-  margin: 10px;
-  padding: 10px 20px;
-  border: 1px solid white;
+#logged-in{
+  padding: 10px;
+  background-color: rgb(0, 255, 0);
+  color: white;
+  border-radius: 10px;
   text-align: center;
+  width: auto;
+}
+
+#not-logged-in{
+  padding: 10px;
+  background-color: rgb(255, 0, 0);
+  color: white;
   border-radius: 10px;
-  background-color: rgba(178, 234, 110, 0.548);
+  text-align: center;
+  width: auto;
 }
-
-img{
-  width: 200px;
-  border-radius: 10px;
-}
-
-p{
-  font-family: 'roboto', sans-serif;
-}
-
