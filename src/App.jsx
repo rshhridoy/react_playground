@@ -3,7 +3,7 @@ import User from "./User.jsx"
 
 function App(){
   return(
-    <User isLoggedIn = {false} username = "Hridoy"/>
+    <User isLoggedIn = {true} username = "Hridoy"/>
   );
 }
 
