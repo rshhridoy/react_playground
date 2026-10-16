@@ -1,10 +1,9 @@
-
-import User from "./User.jsx"
+import List from './List';
 
 function App(){
   return(
-    <User isLoggedIn = {true} username = "Hridoy"/>
+    <List/>
   );
-}
+};
 
 export default App;
