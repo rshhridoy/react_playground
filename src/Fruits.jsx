@@ -1,4 +1,4 @@
-function Fruits(props){
+function Fruits({items = [], category = "Unknown Category"}){
     
 
     // fruits.sort((a , b) => (a.name).localeCompare(b.name)); //Alphabetical
@@ -9,11 +9,10 @@ function Fruits(props){
     
     // Reusable List component
     
-    const itemList = props.items;
-    const categories = props.category;
+    // items and category are extracted directly from props
 
-    const listItem = itemList.map(item => <li key={item.id}>{item.name}: &nbsp;
-                                                                <b>{item.calories}</b></li>)
+    const listItem = items.map(item => (<li key={item.id}>{item.name}: &nbsp;
+                                                                <b>{item.calories}</b></li>));
 
     // const lowCal = fruits.filter(fruit => fruit.calories<= 90);
     // const lowCalFruits = lowCal.map(lowCalFruit => <li key={lowCalFruit.id}>{lowCalFruit.name}: {lowCalFruit.calories}</li>)
@@ -23,7 +22,7 @@ function Fruits(props){
 
     return(
         <>
-            <h2>{categories}</h2>
+            <h2>{category}</h2>
             <ol>{listItem}</ol>
         </>
     );
