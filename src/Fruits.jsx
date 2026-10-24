@@ -1,8 +1,5 @@
-function Fruits(){
-    const fruits = [{id: 1, name: "apple", calories: 95}, 
-                    {id: 2, name:"orange", calories: 110},
-                    {id: 3, name:"banana", calories: 88},
-                    {id: 4, name:"coconut", calories: 90}];
+function Fruits(props){
+    
 
     // fruits.sort((a , b) => (a.name).localeCompare(b.name)); //Alphabetical
     //fruits.sort((a, b) => (b.name).localeCompare(a.name));      // Reverse Alphabetical
@@ -10,21 +7,24 @@ function Fruits(){
     // fruits.sort((a,b) => b.calories- a.calories);       //Reverse Numerical
 
     
+    // Reusable List component
     
-    const listItem = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp;
-                                                                <b>{fruit.calories}</b></li>)
+    const itemList = props.items;
+    const categories = props.category;
 
-    const lowCal = fruits.filter(fruit => fruit.calories<= 90);
-    const lowCalFruits = lowCal.map(lowCalFruit => <li key={lowCalFruit.id}>{lowCalFruit.name}: {lowCalFruit.calories}</li>)
+    const listItem = itemList.map(item => <li key={item.id}>{item.name}: &nbsp;
+                                                                <b>{item.calories}</b></li>)
+
+    // const lowCal = fruits.filter(fruit => fruit.calories<= 90);
+    // const lowCalFruits = lowCal.map(lowCalFruit => <li key={lowCalFruit.id}>{lowCalFruit.name}: {lowCalFruit.calories}</li>)
     
-    const highCal = fruits.filter(fruit => fruit.calories > 90);
-    const highCalFruits = highCal.map(highCalFruit => <li>{highCalFruit.name}</li>)
+    // const highCal = fruits.filter(fruit => fruit.calories > 90);
+    // const highCalFruits = highCal.map(highCalFruit => <li>{highCalFruit.name}</li>)
 
     return(
         <>
+            <h2>{categories}</h2>
             <ol>{listItem}</ol>
-            <ol>{lowCalFruits}</ol>
-            <ol>{highCalFruits}</ol>
         </>
     );
 }
