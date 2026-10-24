@@ -6,8 +6,8 @@ function Fruits(){
 
     // fruits.sort((a , b) => (a.name).localeCompare(b.name)); //Alphabetical
     //fruits.sort((a, b) => (b.name).localeCompare(a.name));      // Reverse Alphabetical
-    fruits.sort((a, b) => a.calories - b.calories);
-
+    // fruits.sort((a, b) => a.calories - b.calories);             // Numerical
+    fruits.sort((a,b) => b.calories- a.calories);
     const listItem = fruits.map(fruit => <li key={fruit.id}>{fruit.name}: &nbsp;
                                                                 <b>{fruit.calories}</b></li>)
 
