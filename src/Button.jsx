@@ -2,8 +2,10 @@ function Button() {
 
     const handleClick = () => console.log("Clicked");
 
+    const handleClick2 = (name) => console.log(`${name}, stop clicking me!! 😡`)
+
     return(
-        <button onClick={handleClick}>Click Me 😃</button>
+        <button onClick={() => handleClick2("Hridoy")}>Click Me 😃</button>
     );
 
 }
