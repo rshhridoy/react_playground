@@ -1,4 +1,5 @@
 import Fruits from "./Fruits";
+import Button from "./Button";
 
 function App(){
   const fruits = [{id: 1, name: "apple", calories: 95}, 
@@ -23,6 +24,8 @@ function App(){
       {fruits.length > 0 ? <Fruits items = {fruits} category = "Fruits"/> : null}
       {vegetables.length > 0 ? <Fruits items = {vegetables} category = "Vegetables"/> : null}
       <Fruits items = {meat}/>
+      
+      <Button/>
     </>
   );
 }
