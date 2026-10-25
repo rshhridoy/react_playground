@@ -4,19 +4,20 @@ function Button() {
 
     let count = 0;
 
-    const handleClick2 = (name) => {
+    const handleClick2 = (e, name) => {
         if(count < 3){
             count++;
             console.log(`${name} you clicked ${count} times.`);
         }else{
             console.log(`${name}, stop clicking me!! 😡`);
+            e.target.textContent = "Ouch!! 🤕";
         }
     };
 
 
 
     return(
-        <button onClick={() => handleClick2("Hridoy")}>Click Me 😃</button>
+        <button onClick={(e) => handleClick2(e, "Hridoy")}>Click Me 😃</button>
     );
 
 }
