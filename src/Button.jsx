@@ -8,6 +8,8 @@ function Button() {
         if(count < 3){
             count++;
             console.log(`${name} you clicked ${count} times.`);
+            e.target.textContent = count;
+
         }else{
             console.log(`${name}, stop clicking me!! 😡`);
             e.target.textContent = "Ouch!! 🤕";
@@ -17,7 +19,9 @@ function Button() {
 
 
     return(
-        <button onClick={(e) => handleClick2(e, "Hridoy")}>Click Me 😃</button>
+        <>
+            <button onClick={(e) => handleClick2(e, "Hridoy")}>Click Me 😃</button>
+        </>
     );
 
 }
